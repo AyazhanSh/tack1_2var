@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+
+</head>
+
+<body>
+	<script>
+        const HOURS_PER_DAY = 24;
+        const MINUTES_PER_HOUR = 60;
+
+		function func(hours, minutes, interval){
+            minutes += interval;
+            hours += Math.floor(minutes/MINUTES_PER_HOUR);
+
+            minutes %= MINUTES_PER_HOUR;
+            hours %= HOURS_PER_DAY;
+
+            if(hours < 10){
+                hours = "0" + hours;
+            }
+
+            if(minutes < 10){
+                minutes = "0" + minutes;
+            }
+
+            return hours + ":" + minutes;
+        }
+		console.log(func(15, 00, 65));
+	</script>
+
+
+
+	</div>
+
+
+</body>
+
+</html>
